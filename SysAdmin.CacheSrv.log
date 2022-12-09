@@ -1,0 +1,567 @@
+2022-12-07 04:20:52,102 DEBUG [3] SysAdmin.Cache.DbCleanupService - BeforeCleanNumersReserved
+2022-12-07 04:20:52,117 DEBUG [3] SysAdmin.Cache.DbCleanupService - EXEC [dbo].[AC_CLEAN_ExpiredNumbersReserved]
+2022-12-07 04:20:52,133 DEBUG [3] SysAdmin.Cache.DbCleanupService - EXEC [dbo].[AC_CLEAN_HISTORY]
+2022-12-07 10:20:51,993 DEBUG [25] SysAdmin.Cache.DbCleanupService - BeforeCleanNumersReserved
+2022-12-07 10:20:51,999 DEBUG [25] SysAdmin.Cache.DbCleanupService - EXEC [dbo].[AC_CLEAN_ExpiredNumbersReserved]
+2022-12-07 10:20:52,003 DEBUG [25] SysAdmin.Cache.DbCleanupService - EXEC [dbo].[AC_CLEAN_HISTORY]
+2022-12-07 13:59:15,802 DEBUG [3] SysAdmin.Cache.CsDataDal - GetCsData enter
+2022-12-07 13:59:15,803 DEBUG [3] SysAdmin.Cache.CsDataDal - csDataType=[pin] origin=[OnPrem], identity=[]
+2022-12-07 13:59:15,846 DEBUG [16] SysAdmin.CacheSrv.NumberRangeModule - GetNumberRangeNoCount enter
+2022-12-07 13:59:15,920 DEBUG [3] SysAdmin.Cache.CsDataDal - GetCsData exit returning [0] results
+2022-12-07 13:59:15,989 DEBUG [16] SysAdmin.CacheSrv.NumberRangeModule - GetNumberRangeNoCount exit
+2022-12-07 13:59:16,135 DEBUG [10] SysAdmin.CacheSrv.EndpointModule - PostSkypeEndpointsPaginated enter
+2022-12-07 13:59:16,162 DEBUG [25] SysAdmin.Cache.CsDataDal - GetCsData enter
+2022-12-07 13:59:16,162 DEBUG [25] SysAdmin.Cache.CsDataDal - csDataType=[onlinevoiceroutingpolicy] origin=[SkypeOnline], identity=[]
+2022-12-07 13:59:16,228 DEBUG [25] SysAdmin.Cache.CsDataDal - GetCsData exit returning [0] results
+2022-12-07 13:59:18,405 DEBUG [10] SysAdmin.CacheSrv.EndpointModule - pageSize:[20],offset:[0]
+2022-12-07 13:59:19,317 DEBUG [10] SysAdmin.CacheSrv.EndpointModule - total records=[20]
+2022-12-07 13:59:19,317 DEBUG [10] SysAdmin.CacheSrv.EndpointModule - PostSkypeEndpointsPaginated exit
+2022-12-07 13:59:30,625 DEBUG [16] SysAdmin.CacheSrv.EndpointModule - GetOneEndpointDetails enter
+2022-12-07 13:59:30,626 DEBUG [16] SysAdmin.CacheSrv.EndpointModule - id=[sip:pattif@m365x22164343.onmicrosoft.com]
+2022-12-07 13:59:30,626 DEBUG [16] SysAdmin.Cache.EndpointSrv - GetEndpointDetails enter
+2022-12-07 13:59:31,912 DEBUG [16] SysAdmin.Cache.EndpointSrv - Select * FROM AC_VIEW_CSONLINEUSER WHERE SipAddress= sip:pattif@m365x22164343.onmicrosoft.com
+2022-12-07 13:59:31,998 DEBUG [16] SysAdmin.Cache.EndpointSrv - GetEndpointDetails exit
+2022-12-07 13:59:31,998 DEBUG [16] SysAdmin.CacheSrv.EndpointModule - GetOneEndpointDetails exit
+2022-12-07 13:59:32,662 DEBUG [23] SysAdmin.Cache.PsQueueDal - GetBySip called
+2022-12-07 13:59:53,851 DEBUG [23] SysAdmin.CacheSrv.EndpointModule - QueueOneEndpointUpdateScript enter
+2022-12-07 13:59:53,851 DEBUG [23] SysAdmin.CacheSrv.EndpointModule - id=[sip:pattif@m365x22164343.onmicrosoft.com]
+2022-12-07 13:59:53,852 DEBUG [23] SysAdmin.Cache.EndpointSrv - QueueOneEndpointUpdateScript enter
+2022-12-07 13:59:54,322 DEBUG [23] SysAdmin.Cache.EndpointSrv - MakeOneEndpointUpdateScript called
+2022-12-07 13:59:54,333 DEBUG [23] SysAdmin.Cache.EndpointSrv - GetEndpointDetails enter
+2022-12-07 13:59:54,353 DEBUG [23] SysAdmin.Cache.EndpointSrv - Select * FROM AC_VIEW_CSONLINEUSER WHERE SipAddress= sip:pattif@m365x22164343.onmicrosoft.com
+2022-12-07 13:59:54,429 DEBUG [23] SysAdmin.Cache.EndpointSrv - GetEndpointDetails exit
+2022-12-07 13:59:54,564 DEBUG [23] SysAdmin.Cache.EndpointSrv - UpdateOneEndpointInDb enter
+2022-12-07 13:59:54,568 DEBUG [23] SysAdmin.Cache.EndpointSrv - setting property [EnterpriseVoiceEnabled] to [True] 
+2022-12-07 13:59:54,569 DEBUG [23] SysAdmin.Cache.EndpointSrv - setting property [OnPremLineURI] to [tel:+456;ext=55] 
+2022-12-07 13:59:54,606 DEBUG [23] SysAdmin.Cache.EndpointSrv - entry LogException
+2022-12-07 13:59:54,608 ERROR [23] SysAdmin.Cache.EndpointSrv - Errorticket:   [638060183946072803]
+Ex.Type:       System.Data.SqlClient.SqlException
+Ex.Source:     .Net SqlClient Data Provider
+Ex.Message:    Invalid column name 'PublishingCounter'.
+Invalid column name 'TeamsVerticalPackagePolicy'.
+Ex.StackTrace:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at DapperExtensions.DapperImplementor.InternalUpdate[T](IDbConnection connection, T entity, IClassMapper classMap, IPredicate predicate, IDbTransaction transaction, IList`1 cols, Nullable`1 commandTimeout, Boolean ignoreAllKeyProperties)
+   at DapperExtensions.DapperImplementor.InternalUpdate[T](IDbConnection connection, T entity, IDbTransaction transaction, IList`1 cols, Nullable`1 commandTimeout, Boolean ignoreAllKeyProperties)
+   at DapperExtensions.DapperImplementor.Update[T](IDbConnection connection, T entity, IDbTransaction transaction, Nullable`1 commandTimeout, Boolean ignoreAllKeyProperties)
+   at SysAdmin.Cache.EndpointDbExt.UpdateEndpoint(IDbConnection dbConnection, Object toUpdateObj, IDbTransaction transaction) in C:\jenkinsslave\workspace\umpBuild\SysAdminKit\SysAdmin.Cache\EndpointSrv.cs:line 50
+   at SysAdmin.Cache.EndpointSrv.UpdateOneEndpointInDb(JObject response, String uType, IDictionary`2 newValuesParams, IDbTransaction transaction) in C:\jenkinsslave\workspace\umpBuild\SysAdminKit\SysAdmin.Cache\EndpointSrv.cs:line 320
+   at SysAdmin.Cache.EndpointSrv.QueueOneEndpointUpdateScript(String sipAddress, Dictionary`2 newValuesParams, String userName, SkypeEndpoint& updatedEndpoint, ChangeType activityType, PsCmdOrigin psCmdOrigin) in C:\jenkinsslave\workspace\umpBuild\SysAdminKit\SysAdmin.Cache\EndpointSrv.cs:line 223
+Ex.HelpLink:   
+
+2022-12-07 13:59:54,616 ERROR [23] SysAdmin.Cache.EndpointSrv - SqlException for sip:pattif@m365x22164343.onmicrosoft.com: Invalid column name 'PublishingCounter'.
+Invalid column name 'TeamsVerticalPackagePolicy'.!
+2022-12-07 13:59:54,616 DEBUG [23] SysAdmin.Cache.EndpointSrv - QueueOneEndpointUpdateScript exit
+2022-12-07 14:08:54,156 DEBUG [16] SysAdmin.CacheSrv.EndpointModule - GetOneEndpointDetails enter
+2022-12-07 14:08:54,156 DEBUG [16] SysAdmin.CacheSrv.EndpointModule - id=[sip:gradya@m365x22164343.onmicrosoft.com]
+2022-12-07 14:08:54,156 DEBUG [16] SysAdmin.Cache.EndpointSrv - GetEndpointDetails enter
+2022-12-07 14:08:55,321 DEBUG [16] SysAdmin.Cache.EndpointSrv - Select * FROM AC_VIEW_CSONLINEUSER WHERE SipAddress= sip:gradya@m365x22164343.onmicrosoft.com
+2022-12-07 14:08:55,395 DEBUG [16] SysAdmin.Cache.EndpointSrv - GetEndpointDetails exit
+2022-12-07 14:08:55,395 DEBUG [16] SysAdmin.CacheSrv.EndpointModule - GetOneEndpointDetails exit
+2022-12-07 14:08:55,979 DEBUG [5] SysAdmin.CacheSrv.NumberRangeModule - GetUnassignedNumbers enter
+2022-12-07 14:08:56,154 DEBUG [10] SysAdmin.Cache.PsQueueDal - GetBySip called
+2022-12-07 14:08:56,321 DEBUG [5] SysAdmin.CacheSrv.NumberRangeModule - GetUnassignedNumbers exit
+2022-12-07 14:09:07,328 DEBUG [22] SysAdmin.CacheSrv.EndpointModule - QueueOneEndpointUpdateScript enter
+2022-12-07 14:09:07,328 DEBUG [22] SysAdmin.CacheSrv.EndpointModule - id=[sip:gradya@m365x22164343.onmicrosoft.com]
+2022-12-07 14:09:07,328 DEBUG [22] SysAdmin.Cache.EndpointSrv - QueueOneEndpointUpdateScript enter
+2022-12-07 14:09:07,786 DEBUG [22] SysAdmin.Cache.EndpointSrv - MakeOneEndpointUpdateScript called
+2022-12-07 14:09:07,797 DEBUG [22] SysAdmin.Cache.EndpointSrv - GetEndpointDetails enter
+2022-12-07 14:09:07,806 DEBUG [22] SysAdmin.Cache.EndpointSrv - Select * FROM AC_VIEW_CSONLINEUSER WHERE SipAddress= sip:gradya@m365x22164343.onmicrosoft.com
+2022-12-07 14:09:07,885 DEBUG [22] SysAdmin.Cache.EndpointSrv - GetEndpointDetails exit
+2022-12-07 14:09:07,988 DEBUG [22] SysAdmin.Cache.EndpointSrv - UpdateOneEndpointInDb enter
+2022-12-07 14:09:07,991 DEBUG [22] SysAdmin.Cache.EndpointSrv - setting property [OnPremLineURI] to [tel:+31364561226;ext=22] 
+2022-12-07 14:09:08,034 DEBUG [22] SysAdmin.Cache.EndpointSrv - entry LogException
+2022-12-07 14:09:08,035 ERROR [22] SysAdmin.Cache.EndpointSrv - Errorticket:   [638060189480342157]
+Ex.Type:       System.Data.SqlClient.SqlException
+Ex.Source:     .Net SqlClient Data Provider
+Ex.Message:    Invalid column name 'PublishingCounter'.
+Invalid column name 'TeamsVerticalPackagePolicy'.
+Ex.StackTrace:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at DapperExtensions.DapperImplementor.InternalUpdate[T](IDbConnection connection, T entity, IClassMapper classMap, IPredicate predicate, IDbTransaction transaction, IList`1 cols, Nullable`1 commandTimeout, Boolean ignoreAllKeyProperties)
+   at DapperExtensions.DapperImplementor.InternalUpdate[T](IDbConnection connection, T entity, IDbTransaction transaction, IList`1 cols, Nullable`1 commandTimeout, Boolean ignoreAllKeyProperties)
+   at DapperExtensions.DapperImplementor.Update[T](IDbConnection connection, T entity, IDbTransaction transaction, Nullable`1 commandTimeout, Boolean ignoreAllKeyProperties)
+   at SysAdmin.Cache.EndpointDbExt.UpdateEndpoint(IDbConnection dbConnection, Object toUpdateObj, IDbTransaction transaction) in C:\jenkinsslave\workspace\umpBuild\SysAdminKit\SysAdmin.Cache\EndpointSrv.cs:line 50
+   at SysAdmin.Cache.EndpointSrv.UpdateOneEndpointInDb(JObject response, String uType, IDictionary`2 newValuesParams, IDbTransaction transaction) in C:\jenkinsslave\workspace\umpBuild\SysAdminKit\SysAdmin.Cache\EndpointSrv.cs:line 320
+   at SysAdmin.Cache.EndpointSrv.QueueOneEndpointUpdateScript(String sipAddress, Dictionary`2 newValuesParams, String userName, SkypeEndpoint& updatedEndpoint, ChangeType activityType, PsCmdOrigin psCmdOrigin) in C:\jenkinsslave\workspace\umpBuild\SysAdminKit\SysAdmin.Cache\EndpointSrv.cs:line 223
+Ex.HelpLink:   
+
+2022-12-07 14:09:08,044 ERROR [22] SysAdmin.Cache.EndpointSrv - SqlException for sip:gradya@m365x22164343.onmicrosoft.com: Invalid column name 'PublishingCounter'.
+Invalid column name 'TeamsVerticalPackagePolicy'.!
+2022-12-07 14:09:08,044 DEBUG [22] SysAdmin.Cache.EndpointSrv - QueueOneEndpointUpdateScript exit
+2022-12-07 14:18:53,536 DEBUG [3] SysAdmin.CacheSrv.EndpointModule - QueueOneEndpointUpdateScript enter
+2022-12-07 14:18:53,536 DEBUG [3] SysAdmin.CacheSrv.EndpointModule - id=[sip:gradya@m365x22164343.onmicrosoft.com]
+2022-12-07 14:18:53,536 DEBUG [3] SysAdmin.Cache.EndpointSrv - QueueOneEndpointUpdateScript enter
+2022-12-07 14:18:53,892 DEBUG [3] SysAdmin.Cache.EndpointSrv - MakeOneEndpointUpdateScript called
+2022-12-07 14:18:53,910 DEBUG [3] SysAdmin.Cache.EndpointSrv - GetEndpointDetails enter
+2022-12-07 14:18:53,960 DEBUG [3] SysAdmin.Cache.EndpointSrv - Select * FROM AC_VIEW_CSONLINEUSER WHERE SipAddress= sip:gradya@m365x22164343.onmicrosoft.com
+2022-12-07 14:18:54,026 DEBUG [3] SysAdmin.Cache.EndpointSrv - GetEndpointDetails exit
+2022-12-07 14:18:54,061 DEBUG [3] SysAdmin.Cache.EndpointSrv - UpdateOneEndpointInDb enter
+2022-12-07 14:18:54,067 DEBUG [3] SysAdmin.Cache.EndpointSrv - setting property [OnPremLineURI] to [tel:+31364561226;ext=22] 
+2022-12-07 14:18:54,106 DEBUG [3] SysAdmin.Cache.EndpointSrv - entry LogException
+2022-12-07 14:18:54,106 ERROR [3] SysAdmin.Cache.EndpointSrv - Errorticket:   [638060195341068928]
+Ex.Type:       System.Data.SqlClient.SqlException
+Ex.Source:     .Net SqlClient Data Provider
+Ex.Message:    Invalid column name 'PublishingCounter'.
+Invalid column name 'TeamsVerticalPackagePolicy'.
+Ex.StackTrace:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at DapperExtensions.DapperImplementor.InternalUpdate[T](IDbConnection connection, T entity, IClassMapper classMap, IPredicate predicate, IDbTransaction transaction, IList`1 cols, Nullable`1 commandTimeout, Boolean ignoreAllKeyProperties)
+   at DapperExtensions.DapperImplementor.InternalUpdate[T](IDbConnection connection, T entity, IDbTransaction transaction, IList`1 cols, Nullable`1 commandTimeout, Boolean ignoreAllKeyProperties)
+   at DapperExtensions.DapperImplementor.Update[T](IDbConnection connection, T entity, IDbTransaction transaction, Nullable`1 commandTimeout, Boolean ignoreAllKeyProperties)
+   at SysAdmin.Cache.EndpointDbExt.UpdateEndpoint(IDbConnection dbConnection, Object toUpdateObj, IDbTransaction transaction) in C:\jenkinsslave\workspace\umpBuild\SysAdminKit\SysAdmin.Cache\EndpointSrv.cs:line 50
+   at SysAdmin.Cache.EndpointSrv.UpdateOneEndpointInDb(JObject response, String uType, IDictionary`2 newValuesParams, IDbTransaction transaction) in C:\jenkinsslave\workspace\umpBuild\SysAdminKit\SysAdmin.Cache\EndpointSrv.cs:line 320
+   at SysAdmin.Cache.EndpointSrv.QueueOneEndpointUpdateScript(String sipAddress, Dictionary`2 newValuesParams, String userName, SkypeEndpoint& updatedEndpoint, ChangeType activityType, PsCmdOrigin psCmdOrigin) in C:\jenkinsslave\workspace\umpBuild\SysAdminKit\SysAdmin.Cache\EndpointSrv.cs:line 223
+Ex.HelpLink:   
+
+2022-12-07 14:18:54,108 ERROR [3] SysAdmin.Cache.EndpointSrv - SqlException for sip:gradya@m365x22164343.onmicrosoft.com: Invalid column name 'PublishingCounter'.
+Invalid column name 'TeamsVerticalPackagePolicy'.!
+2022-12-07 14:18:54,108 DEBUG [3] SysAdmin.Cache.EndpointSrv - QueueOneEndpointUpdateScript exit
+2022-12-07 14:52:47,407 DEBUG [22] SysAdmin.CacheSrv.EndpointModule - GetOneEndpointDetails enter
+2022-12-07 14:52:47,408 DEBUG [22] SysAdmin.CacheSrv.EndpointModule - id=[sip:gradya@m365x22164343.onmicrosoft.com]
+2022-12-07 14:52:47,408 DEBUG [22] SysAdmin.Cache.EndpointSrv - GetEndpointDetails enter
+2022-12-07 14:52:47,782 DEBUG [22] SysAdmin.Cache.EndpointSrv - Select * FROM AC_VIEW_CSONLINEUSER WHERE SipAddress= sip:gradya@m365x22164343.onmicrosoft.com
+2022-12-07 14:52:47,858 DEBUG [22] SysAdmin.Cache.EndpointSrv - GetEndpointDetails exit
+2022-12-07 14:52:47,858 DEBUG [22] SysAdmin.CacheSrv.EndpointModule - GetOneEndpointDetails exit
+2022-12-07 14:52:48,311 DEBUG [16] SysAdmin.CacheSrv.NumberRangeModule - GetUnassignedNumbers enter
+2022-12-07 14:52:48,456 DEBUG [16] SysAdmin.CacheSrv.NumberRangeModule - GetUnassignedNumbers exit
+2022-12-07 14:52:48,519 DEBUG [5] SysAdmin.Cache.PsQueueDal - GetBySip called
+2022-12-07 14:53:15,365 DEBUG [25] SysAdmin.CacheSrv.EndpointModule - QueueOneEndpointUpdateScript enter
+2022-12-07 14:53:15,365 DEBUG [25] SysAdmin.CacheSrv.EndpointModule - id=[sip:gradya@m365x22164343.onmicrosoft.com]
+2022-12-07 14:53:15,365 DEBUG [25] SysAdmin.Cache.EndpointSrv - QueueOneEndpointUpdateScript enter
+2022-12-07 14:53:16,077 DEBUG [25] SysAdmin.Cache.EndpointSrv - MakeOneEndpointUpdateScript called
+2022-12-07 14:53:16,086 DEBUG [25] SysAdmin.Cache.EndpointSrv - GetEndpointDetails enter
+2022-12-07 14:53:16,189 DEBUG [25] SysAdmin.Cache.EndpointSrv - Select * FROM AC_VIEW_CSONLINEUSER WHERE SipAddress= sip:gradya@m365x22164343.onmicrosoft.com
+2022-12-07 14:53:16,316 DEBUG [25] SysAdmin.Cache.EndpointSrv - GetEndpointDetails exit
+2022-12-07 14:53:16,390 DEBUG [25] SysAdmin.Cache.EndpointSrv - UpdateOneEndpointInDb enter
+2022-12-07 14:53:16,397 DEBUG [25] SysAdmin.Cache.EndpointSrv - setting property [OnPremLineURI] to [tel:+31364561226;ext=227] 
+2022-12-07 14:53:16,435 DEBUG [25] SysAdmin.Cache.EndpointSrv - entry LogException
+2022-12-07 14:53:16,437 ERROR [25] SysAdmin.Cache.EndpointSrv - Errorticket:   [638060215964359937]
+Ex.Type:       System.Data.SqlClient.SqlException
+Ex.Source:     .Net SqlClient Data Provider
+Ex.Message:    Invalid column name 'PublishingCounter'.
+Invalid column name 'TeamsVerticalPackagePolicy'.
+Ex.StackTrace:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at DapperExtensions.DapperImplementor.InternalUpdate[T](IDbConnection connection, T entity, IClassMapper classMap, IPredicate predicate, IDbTransaction transaction, IList`1 cols, Nullable`1 commandTimeout, Boolean ignoreAllKeyProperties)
+   at DapperExtensions.DapperImplementor.InternalUpdate[T](IDbConnection connection, T entity, IDbTransaction transaction, IList`1 cols, Nullable`1 commandTimeout, Boolean ignoreAllKeyProperties)
+   at DapperExtensions.DapperImplementor.Update[T](IDbConnection connection, T entity, IDbTransaction transaction, Nullable`1 commandTimeout, Boolean ignoreAllKeyProperties)
+   at SysAdmin.Cache.EndpointDbExt.UpdateEndpoint(IDbConnection dbConnection, Object toUpdateObj, IDbTransaction transaction) in C:\jenkinsslave\workspace\umpBuild\SysAdminKit\SysAdmin.Cache\EndpointSrv.cs:line 50
+   at SysAdmin.Cache.EndpointSrv.UpdateOneEndpointInDb(JObject response, String uType, IDictionary`2 newValuesParams, IDbTransaction transaction) in C:\jenkinsslave\workspace\umpBuild\SysAdminKit\SysAdmin.Cache\EndpointSrv.cs:line 320
+   at SysAdmin.Cache.EndpointSrv.QueueOneEndpointUpdateScript(String sipAddress, Dictionary`2 newValuesParams, String userName, SkypeEndpoint& updatedEndpoint, ChangeType activityType, PsCmdOrigin psCmdOrigin) in C:\jenkinsslave\workspace\umpBuild\SysAdminKit\SysAdmin.Cache\EndpointSrv.cs:line 223
+Ex.HelpLink:   
+
+2022-12-07 14:53:16,440 ERROR [25] SysAdmin.Cache.EndpointSrv - SqlException for sip:gradya@m365x22164343.onmicrosoft.com: Invalid column name 'PublishingCounter'.
+Invalid column name 'TeamsVerticalPackagePolicy'.!
+2022-12-07 14:53:16,440 DEBUG [25] SysAdmin.Cache.EndpointSrv - QueueOneEndpointUpdateScript exit
+2022-12-07 15:00:10,294 DEBUG [5] SysAdmin.CacheSrv.EndpointModule - GetOneEndpointDetails enter
+2022-12-07 15:00:10,294 DEBUG [5] SysAdmin.CacheSrv.EndpointModule - id=[sip:pattif@m365x22164343.onmicrosoft.com]
+2022-12-07 15:00:10,294 DEBUG [5] SysAdmin.Cache.EndpointSrv - GetEndpointDetails enter
+2022-12-07 15:00:10,821 DEBUG [5] SysAdmin.Cache.EndpointSrv - Select * FROM AC_VIEW_CSONLINEUSER WHERE SipAddress= sip:pattif@m365x22164343.onmicrosoft.com
+2022-12-07 15:00:10,886 DEBUG [5] SysAdmin.Cache.EndpointSrv - GetEndpointDetails exit
+2022-12-07 15:00:10,886 DEBUG [5] SysAdmin.CacheSrv.EndpointModule - GetOneEndpointDetails exit
+2022-12-07 15:08:03,508 DEBUG [16] SysAdmin.CacheSrv.EndpointModule - GetOneEndpointDetails enter
+2022-12-07 15:08:03,509 DEBUG [16] SysAdmin.CacheSrv.EndpointModule - id=[sip:gradya@m365x22164343.onmicrosoft.com]
+2022-12-07 15:08:03,509 DEBUG [16] SysAdmin.Cache.EndpointSrv - GetEndpointDetails enter
+2022-12-07 15:08:03,856 DEBUG [16] SysAdmin.Cache.EndpointSrv - Select * FROM AC_VIEW_CSONLINEUSER WHERE SipAddress= sip:gradya@m365x22164343.onmicrosoft.com
+2022-12-07 15:08:03,931 DEBUG [16] SysAdmin.Cache.EndpointSrv - GetEndpointDetails exit
+2022-12-07 15:08:03,931 DEBUG [16] SysAdmin.CacheSrv.EndpointModule - GetOneEndpointDetails exit
+2022-12-07 15:08:04,617 DEBUG [10] SysAdmin.CacheSrv.NumberRangeModule - GetUnassignedNumbers enter
+2022-12-07 15:08:04,769 DEBUG [10] SysAdmin.CacheSrv.NumberRangeModule - GetUnassignedNumbers exit
+2022-12-07 15:08:04,796 DEBUG [23] SysAdmin.Cache.PsQueueDal - GetBySip called
+2022-12-07 15:14:51,144 DEBUG [22] SysAdmin.CacheSrv.NumberRangeModule - GetNumberRangeNoCount enter
+2022-12-07 15:14:51,217 DEBUG [22] SysAdmin.CacheSrv.NumberRangeModule - GetNumberRangeNoCount exit
+2022-12-07 15:14:51,218 DEBUG [23] SysAdmin.Cache.CsDataDal - GetCsData enter
+2022-12-07 15:14:51,218 DEBUG [23] SysAdmin.Cache.CsDataDal - csDataType=[pin] origin=[OnPrem], identity=[]
+2022-12-07 15:14:51,320 DEBUG [23] SysAdmin.Cache.CsDataDal - GetCsData exit returning [0] results
+2022-12-07 15:14:51,329 DEBUG [16] SysAdmin.CacheSrv.EndpointModule - PostSkypeEndpointsPaginated enter
+2022-12-07 15:14:51,422 DEBUG [23] SysAdmin.Cache.CsDataDal - GetCsData enter
+2022-12-07 15:14:51,422 DEBUG [23] SysAdmin.Cache.CsDataDal - csDataType=[onlinevoiceroutingpolicy] origin=[SkypeOnline], identity=[]
+2022-12-07 15:14:51,438 DEBUG [23] SysAdmin.Cache.CsDataDal - GetCsData exit returning [0] results
+2022-12-07 15:14:52,373 DEBUG [16] SysAdmin.CacheSrv.EndpointModule - pageSize:[20],offset:[0]
+2022-12-07 15:14:52,491 DEBUG [16] SysAdmin.CacheSrv.EndpointModule - total records=[20]
+2022-12-07 15:14:52,491 DEBUG [16] SysAdmin.CacheSrv.EndpointModule - PostSkypeEndpointsPaginated exit
+2022-12-07 15:15:38,428 DEBUG [23] SysAdmin.CacheSrv.EndpointModule - GetOneEndpointDetails enter
+2022-12-07 15:15:38,428 DEBUG [23] SysAdmin.CacheSrv.EndpointModule - id=[sip:gradya@m365x22164343.onmicrosoft.com]
+2022-12-07 15:15:38,428 DEBUG [23] SysAdmin.Cache.EndpointSrv - GetEndpointDetails enter
+2022-12-07 15:15:39,216 DEBUG [23] SysAdmin.Cache.EndpointSrv - Select * FROM AC_VIEW_CSONLINEUSER WHERE SipAddress= sip:gradya@m365x22164343.onmicrosoft.com
+2022-12-07 15:15:39,290 DEBUG [23] SysAdmin.Cache.EndpointSrv - GetEndpointDetails exit
+2022-12-07 15:15:39,290 DEBUG [23] SysAdmin.CacheSrv.EndpointModule - GetOneEndpointDetails exit
+2022-12-07 15:15:39,910 DEBUG [5] SysAdmin.Cache.PsQueueDal - GetBySip called
+2022-12-07 15:24:12,658 DEBUG [10] SysAdmin.CacheSrv.EndpointModule - QueueOneEndpointUpdateScript enter
+2022-12-07 15:24:12,658 DEBUG [10] SysAdmin.CacheSrv.EndpointModule - id=[sip:gradya@m365x22164343.onmicrosoft.com]
+2022-12-07 15:24:12,658 DEBUG [10] SysAdmin.Cache.EndpointSrv - QueueOneEndpointUpdateScript enter
+2022-12-07 15:24:13,159 DEBUG [10] SysAdmin.Cache.EndpointSrv - MakeOneEndpointUpdateScript called
+2022-12-07 15:24:13,167 DEBUG [10] SysAdmin.Cache.EndpointSrv - GetEndpointDetails enter
+2022-12-07 15:24:13,306 DEBUG [10] SysAdmin.Cache.EndpointSrv - Select * FROM AC_VIEW_CSONLINEUSER WHERE SipAddress= sip:gradya@m365x22164343.onmicrosoft.com
+2022-12-07 15:24:13,400 DEBUG [10] SysAdmin.Cache.EndpointSrv - GetEndpointDetails exit
+2022-12-07 15:24:13,496 DEBUG [10] SysAdmin.Cache.EndpointSrv - UpdateOneEndpointInDb enter
+2022-12-07 15:24:13,501 DEBUG [10] SysAdmin.Cache.EndpointSrv - setting property [OnPremLineURI] to [tel:+31364561226;ext=227] 
+2022-12-07 15:24:13,555 DEBUG [10] SysAdmin.Cache.EndpointSrv - entry LogException
+2022-12-07 15:24:13,556 ERROR [10] SysAdmin.Cache.EndpointSrv - Errorticket:   [638060234535551907]
+Ex.Type:       System.Data.SqlClient.SqlException
+Ex.Source:     .Net SqlClient Data Provider
+Ex.Message:    Invalid column name 'PublishingCounter'.
+Invalid column name 'TeamsVerticalPackagePolicy'.
+Ex.StackTrace:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at DapperExtensions.DapperImplementor.InternalUpdate[T](IDbConnection connection, T entity, IClassMapper classMap, IPredicate predicate, IDbTransaction transaction, IList`1 cols, Nullable`1 commandTimeout, Boolean ignoreAllKeyProperties)
+   at DapperExtensions.DapperImplementor.InternalUpdate[T](IDbConnection connection, T entity, IDbTransaction transaction, IList`1 cols, Nullable`1 commandTimeout, Boolean ignoreAllKeyProperties)
+   at DapperExtensions.DapperImplementor.Update[T](IDbConnection connection, T entity, IDbTransaction transaction, Nullable`1 commandTimeout, Boolean ignoreAllKeyProperties)
+   at SysAdmin.Cache.EndpointDbExt.UpdateEndpoint(IDbConnection dbConnection, Object toUpdateObj, IDbTransaction transaction) in C:\jenkinsslave\workspace\umpBuild\SysAdminKit\SysAdmin.Cache\EndpointSrv.cs:line 50
+   at SysAdmin.Cache.EndpointSrv.UpdateOneEndpointInDb(JObject response, String uType, IDictionary`2 newValuesParams, IDbTransaction transaction) in C:\jenkinsslave\workspace\umpBuild\SysAdminKit\SysAdmin.Cache\EndpointSrv.cs:line 320
+   at SysAdmin.Cache.EndpointSrv.QueueOneEndpointUpdateScript(String sipAddress, Dictionary`2 newValuesParams, String userName, SkypeEndpoint& updatedEndpoint, ChangeType activityType, PsCmdOrigin psCmdOrigin) in C:\jenkinsslave\workspace\umpBuild\SysAdminKit\SysAdmin.Cache\EndpointSrv.cs:line 223
+Ex.HelpLink:   
+
+2022-12-07 15:24:13,570 ERROR [10] SysAdmin.Cache.EndpointSrv - SqlException for sip:gradya@m365x22164343.onmicrosoft.com: Invalid column name 'PublishingCounter'.
+Invalid column name 'TeamsVerticalPackagePolicy'.!
+2022-12-07 15:24:13,570 DEBUG [10] SysAdmin.Cache.EndpointSrv - QueueOneEndpointUpdateScript exit
+2022-12-07 15:24:42,974 DEBUG [3] SysAdmin.CacheSrv.EndpointModule - QueueOneEndpointUpdateScript enter
+2022-12-07 15:24:42,974 DEBUG [3] SysAdmin.CacheSrv.EndpointModule - id=[sip:gradya@m365x22164343.onmicrosoft.com]
+2022-12-07 15:24:42,974 DEBUG [3] SysAdmin.Cache.EndpointSrv - QueueOneEndpointUpdateScript enter
+2022-12-07 15:24:43,818 DEBUG [3] SysAdmin.Cache.EndpointSrv - MakeOneEndpointUpdateScript called
+2022-12-07 15:24:43,831 DEBUG [3] SysAdmin.Cache.EndpointSrv - GetEndpointDetails enter
+2022-12-07 15:24:43,898 DEBUG [3] SysAdmin.Cache.EndpointSrv - Select * FROM AC_VIEW_CSONLINEUSER WHERE SipAddress= sip:gradya@m365x22164343.onmicrosoft.com
+2022-12-07 15:24:43,971 DEBUG [3] SysAdmin.Cache.EndpointSrv - GetEndpointDetails exit
+2022-12-07 15:24:44,034 DEBUG [3] SysAdmin.Cache.EndpointSrv - UpdateOneEndpointInDb enter
+2022-12-07 15:24:44,037 DEBUG [3] SysAdmin.Cache.EndpointSrv - setting property [OnPremLineURI] to [tel:+31364561226;ext=227] 
+2022-12-07 15:24:44,068 DEBUG [3] SysAdmin.Cache.EndpointSrv - entry LogException
+2022-12-07 15:24:44,068 ERROR [3] SysAdmin.Cache.EndpointSrv - Errorticket:   [638060234840681307]
+Ex.Type:       System.Data.SqlClient.SqlException
+Ex.Source:     .Net SqlClient Data Provider
+Ex.Message:    Invalid column name 'PublishingCounter'.
+Invalid column name 'TeamsVerticalPackagePolicy'.
+Ex.StackTrace:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at DapperExtensions.DapperImplementor.InternalUpdate[T](IDbConnection connection, T entity, IClassMapper classMap, IPredicate predicate, IDbTransaction transaction, IList`1 cols, Nullable`1 commandTimeout, Boolean ignoreAllKeyProperties)
+   at DapperExtensions.DapperImplementor.InternalUpdate[T](IDbConnection connection, T entity, IDbTransaction transaction, IList`1 cols, Nullable`1 commandTimeout, Boolean ignoreAllKeyProperties)
+   at DapperExtensions.DapperImplementor.Update[T](IDbConnection connection, T entity, IDbTransaction transaction, Nullable`1 commandTimeout, Boolean ignoreAllKeyProperties)
+   at SysAdmin.Cache.EndpointDbExt.UpdateEndpoint(IDbConnection dbConnection, Object toUpdateObj, IDbTransaction transaction) in C:\jenkinsslave\workspace\umpBuild\SysAdminKit\SysAdmin.Cache\EndpointSrv.cs:line 50
+   at SysAdmin.Cache.EndpointSrv.UpdateOneEndpointInDb(JObject response, String uType, IDictionary`2 newValuesParams, IDbTransaction transaction) in C:\jenkinsslave\workspace\umpBuild\SysAdminKit\SysAdmin.Cache\EndpointSrv.cs:line 320
+   at SysAdmin.Cache.EndpointSrv.QueueOneEndpointUpdateScript(String sipAddress, Dictionary`2 newValuesParams, String userName, SkypeEndpoint& updatedEndpoint, ChangeType activityType, PsCmdOrigin psCmdOrigin) in C:\jenkinsslave\workspace\umpBuild\SysAdminKit\SysAdmin.Cache\EndpointSrv.cs:line 223
+Ex.HelpLink:   
+
+2022-12-07 15:24:44,069 ERROR [3] SysAdmin.Cache.EndpointSrv - SqlException for sip:gradya@m365x22164343.onmicrosoft.com: Invalid column name 'PublishingCounter'.
+Invalid column name 'TeamsVerticalPackagePolicy'.!
+2022-12-07 15:24:44,069 DEBUG [3] SysAdmin.Cache.EndpointSrv - QueueOneEndpointUpdateScript exit
+2022-12-07 15:25:27,448 DEBUG [25] SysAdmin.CacheSrv.EndpointModule - QueueOneEndpointUpdateScript enter
+2022-12-07 15:25:27,448 DEBUG [25] SysAdmin.CacheSrv.EndpointModule - id=[sip:gradya@m365x22164343.onmicrosoft.com]
+2022-12-07 15:25:27,448 DEBUG [25] SysAdmin.Cache.EndpointSrv - QueueOneEndpointUpdateScript enter
+2022-12-07 15:25:27,810 DEBUG [25] SysAdmin.Cache.EndpointSrv - MakeOneEndpointUpdateScript called
+2022-12-07 15:25:27,824 DEBUG [25] SysAdmin.Cache.EndpointSrv - GetEndpointDetails enter
+2022-12-07 15:25:27,872 DEBUG [25] SysAdmin.Cache.EndpointSrv - Select * FROM AC_VIEW_CSONLINEUSER WHERE SipAddress= sip:gradya@m365x22164343.onmicrosoft.com
+2022-12-07 15:25:27,967 DEBUG [25] SysAdmin.Cache.EndpointSrv - GetEndpointDetails exit
+2022-12-07 15:25:28,120 DEBUG [25] SysAdmin.Cache.EndpointSrv - UpdateOneEndpointInDb enter
+2022-12-07 15:25:28,150 DEBUG [25] SysAdmin.Cache.EndpointSrv - setting property [OnPremLineURI] to [tel:+31364561226;ext=227] 
+2022-12-07 15:25:28,219 DEBUG [25] SysAdmin.Cache.EndpointSrv - entry LogException
+2022-12-07 15:25:28,219 ERROR [25] SysAdmin.Cache.EndpointSrv - Errorticket:   [638060235282190816]
+Ex.Type:       System.Data.SqlClient.SqlException
+Ex.Source:     .Net SqlClient Data Provider
+Ex.Message:    Invalid column name 'PublishingCounter'.
+Invalid column name 'TeamsVerticalPackagePolicy'.
+Ex.StackTrace:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at DapperExtensions.DapperImplementor.InternalUpdate[T](IDbConnection connection, T entity, IClassMapper classMap, IPredicate predicate, IDbTransaction transaction, IList`1 cols, Nullable`1 commandTimeout, Boolean ignoreAllKeyProperties)
+   at DapperExtensions.DapperImplementor.InternalUpdate[T](IDbConnection connection, T entity, IDbTransaction transaction, IList`1 cols, Nullable`1 commandTimeout, Boolean ignoreAllKeyProperties)
+   at DapperExtensions.DapperImplementor.Update[T](IDbConnection connection, T entity, IDbTransaction transaction, Nullable`1 commandTimeout, Boolean ignoreAllKeyProperties)
+   at SysAdmin.Cache.EndpointDbExt.UpdateEndpoint(IDbConnection dbConnection, Object toUpdateObj, IDbTransaction transaction) in C:\jenkinsslave\workspace\umpBuild\SysAdminKit\SysAdmin.Cache\EndpointSrv.cs:line 50
+   at SysAdmin.Cache.EndpointSrv.UpdateOneEndpointInDb(JObject response, String uType, IDictionary`2 newValuesParams, IDbTransaction transaction) in C:\jenkinsslave\workspace\umpBuild\SysAdminKit\SysAdmin.Cache\EndpointSrv.cs:line 320
+   at SysAdmin.Cache.EndpointSrv.QueueOneEndpointUpdateScript(String sipAddress, Dictionary`2 newValuesParams, String userName, SkypeEndpoint& updatedEndpoint, ChangeType activityType, PsCmdOrigin psCmdOrigin) in C:\jenkinsslave\workspace\umpBuild\SysAdminKit\SysAdmin.Cache\EndpointSrv.cs:line 223
+Ex.HelpLink:   
+
+2022-12-07 15:25:28,221 ERROR [25] SysAdmin.Cache.EndpointSrv - SqlException for sip:gradya@m365x22164343.onmicrosoft.com: Invalid column name 'PublishingCounter'.
+Invalid column name 'TeamsVerticalPackagePolicy'.!
+2022-12-07 15:25:28,221 DEBUG [25] SysAdmin.Cache.EndpointSrv - QueueOneEndpointUpdateScript exit
+2022-12-07 15:31:47,539 DEBUG [23] SysAdmin.CacheSrv.EndpointModule - QueueOneEndpointUpdateScript enter
+2022-12-07 15:31:47,539 DEBUG [23] SysAdmin.CacheSrv.EndpointModule - id=[sip:gradya@m365x22164343.onmicrosoft.com]
+2022-12-07 15:31:47,539 DEBUG [23] SysAdmin.Cache.EndpointSrv - QueueOneEndpointUpdateScript enter
+2022-12-07 15:31:48,542 DEBUG [23] SysAdmin.Cache.EndpointSrv - MakeOneEndpointUpdateScript called
+2022-12-07 15:31:48,552 DEBUG [23] SysAdmin.Cache.EndpointSrv - GetEndpointDetails enter
+2022-12-07 15:31:48,604 DEBUG [23] SysAdmin.Cache.EndpointSrv - Select * FROM AC_VIEW_CSONLINEUSER WHERE SipAddress= sip:gradya@m365x22164343.onmicrosoft.com
+2022-12-07 15:31:48,674 DEBUG [23] SysAdmin.Cache.EndpointSrv - GetEndpointDetails exit
+2022-12-07 15:31:48,758 DEBUG [23] SysAdmin.Cache.EndpointSrv - UpdateOneEndpointInDb enter
+2022-12-07 15:31:48,761 DEBUG [23] SysAdmin.Cache.EndpointSrv - setting property [OnPremLineURI] to [tel:+31364561226;ext=227] 
+2022-12-07 15:31:48,793 DEBUG [23] SysAdmin.Cache.EndpointSrv - entry LogException
+2022-12-07 15:31:48,794 ERROR [23] SysAdmin.Cache.EndpointSrv - Errorticket:   [638060239087936542]
+Ex.Type:       System.Data.SqlClient.SqlException
+Ex.Source:     .Net SqlClient Data Provider
+Ex.Message:    Invalid column name 'PublishingCounter'.
+Invalid column name 'TeamsVerticalPackagePolicy'.
+Ex.StackTrace:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at DapperExtensions.DapperImplementor.InternalUpdate[T](IDbConnection connection, T entity, IClassMapper classMap, IPredicate predicate, IDbTransaction transaction, IList`1 cols, Nullable`1 commandTimeout, Boolean ignoreAllKeyProperties)
+   at DapperExtensions.DapperImplementor.InternalUpdate[T](IDbConnection connection, T entity, IDbTransaction transaction, IList`1 cols, Nullable`1 commandTimeout, Boolean ignoreAllKeyProperties)
+   at DapperExtensions.DapperImplementor.Update[T](IDbConnection connection, T entity, IDbTransaction transaction, Nullable`1 commandTimeout, Boolean ignoreAllKeyProperties)
+   at SysAdmin.Cache.EndpointDbExt.UpdateEndpoint(IDbConnection dbConnection, Object toUpdateObj, IDbTransaction transaction) in C:\jenkinsslave\workspace\umpBuild\SysAdminKit\SysAdmin.Cache\EndpointSrv.cs:line 50
+   at SysAdmin.Cache.EndpointSrv.UpdateOneEndpointInDb(JObject response, String uType, IDictionary`2 newValuesParams, IDbTransaction transaction) in C:\jenkinsslave\workspace\umpBuild\SysAdminKit\SysAdmin.Cache\EndpointSrv.cs:line 320
+   at SysAdmin.Cache.EndpointSrv.QueueOneEndpointUpdateScript(String sipAddress, Dictionary`2 newValuesParams, String userName, SkypeEndpoint& updatedEndpoint, ChangeType activityType, PsCmdOrigin psCmdOrigin) in C:\jenkinsslave\workspace\umpBuild\SysAdminKit\SysAdmin.Cache\EndpointSrv.cs:line 223
+Ex.HelpLink:   
+
+2022-12-07 15:31:48,795 ERROR [23] SysAdmin.Cache.EndpointSrv - SqlException for sip:gradya@m365x22164343.onmicrosoft.com: Invalid column name 'PublishingCounter'.
+Invalid column name 'TeamsVerticalPackagePolicy'.!
+2022-12-07 15:31:48,795 DEBUG [23] SysAdmin.Cache.EndpointSrv - QueueOneEndpointUpdateScript exit
+2022-12-07 15:41:51,065 DEBUG [22] SysAdmin.Cache.CsDataDal - GetCsData enter
+2022-12-07 15:41:51,066 DEBUG [22] SysAdmin.Cache.CsDataDal - csDataType=[pin] origin=[OnPrem], identity=[]
+2022-12-07 15:41:51,077 DEBUG [23] SysAdmin.CacheSrv.NumberRangeModule - GetNumberRangeNoCount enter
+2022-12-07 15:41:51,126 DEBUG [23] SysAdmin.CacheSrv.NumberRangeModule - GetNumberRangeNoCount exit
+2022-12-07 15:41:51,128 DEBUG [22] SysAdmin.Cache.CsDataDal - GetCsData exit returning [0] results
+2022-12-07 15:41:51,229 DEBUG [16] SysAdmin.CacheSrv.EndpointModule - PostSkypeEndpointsPaginated enter
+2022-12-07 15:41:51,271 DEBUG [3] SysAdmin.Cache.CsDataDal - GetCsData enter
+2022-12-07 15:41:51,271 DEBUG [3] SysAdmin.Cache.CsDataDal - csDataType=[onlinevoiceroutingpolicy] origin=[SkypeOnline], identity=[]
+2022-12-07 15:41:51,325 DEBUG [3] SysAdmin.Cache.CsDataDal - GetCsData exit returning [0] results
+2022-12-07 15:41:52,175 DEBUG [16] SysAdmin.CacheSrv.EndpointModule - pageSize:[20],offset:[0]
+2022-12-07 15:41:52,311 DEBUG [16] SysAdmin.CacheSrv.EndpointModule - total records=[20]
+2022-12-07 15:41:52,311 DEBUG [16] SysAdmin.CacheSrv.EndpointModule - PostSkypeEndpointsPaginated exit
+2022-12-07 15:41:55,999 DEBUG [25] SysAdmin.CacheSrv.EndpointModule - GetOneEndpointDetails enter
+2022-12-07 15:41:55,999 DEBUG [25] SysAdmin.CacheSrv.EndpointModule - id=[sip:gradya@m365x22164343.onmicrosoft.com]
+2022-12-07 15:41:55,999 DEBUG [25] SysAdmin.Cache.EndpointSrv - GetEndpointDetails enter
+2022-12-07 15:41:56,711 DEBUG [25] SysAdmin.Cache.EndpointSrv - Select * FROM AC_VIEW_CSONLINEUSER WHERE SipAddress= sip:gradya@m365x22164343.onmicrosoft.com
+2022-12-07 15:41:56,768 DEBUG [25] SysAdmin.Cache.EndpointSrv - GetEndpointDetails exit
+2022-12-07 15:41:56,768 DEBUG [25] SysAdmin.CacheSrv.EndpointModule - GetOneEndpointDetails exit
+2022-12-07 15:41:57,277 DEBUG [5] SysAdmin.Cache.PsQueueDal - GetBySip called
+2022-12-07 15:45:00,827 DEBUG [16] SysAdmin.CacheSrv.EndpointModule - GetOneEndpointDetails enter
+2022-12-07 15:45:00,828 DEBUG [16] SysAdmin.CacheSrv.EndpointModule - id=[sip:pattif@m365x22164343.onmicrosoft.com]
+2022-12-07 15:45:00,828 DEBUG [16] SysAdmin.Cache.EndpointSrv - GetEndpointDetails enter
+2022-12-07 15:45:01,652 DEBUG [16] SysAdmin.Cache.EndpointSrv - Select * FROM AC_VIEW_CSONLINEUSER WHERE SipAddress= sip:pattif@m365x22164343.onmicrosoft.com
+2022-12-07 15:45:01,728 DEBUG [16] SysAdmin.Cache.EndpointSrv - GetEndpointDetails exit
+2022-12-07 15:45:01,728 DEBUG [16] SysAdmin.CacheSrv.EndpointModule - GetOneEndpointDetails exit
+2022-12-07 15:49:39,454 DEBUG [25] SysAdmin.Cache.CsDataDal - GetCsData enter
+2022-12-07 15:49:39,454 DEBUG [25] SysAdmin.Cache.CsDataDal - csDataType=[pin] origin=[OnPrem], identity=[]
+2022-12-07 15:49:39,505 DEBUG [23] SysAdmin.CacheSrv.NumberRangeModule - GetNumberRangeNoCount enter
+2022-12-07 15:49:39,524 DEBUG [25] SysAdmin.Cache.CsDataDal - GetCsData exit returning [0] results
+2022-12-07 15:49:39,527 DEBUG [23] SysAdmin.CacheSrv.NumberRangeModule - GetNumberRangeNoCount exit
+2022-12-07 15:49:39,599 DEBUG [16] SysAdmin.CacheSrv.EndpointModule - PostSkypeEndpointsPaginated enter
+2022-12-07 15:49:39,630 DEBUG [22] SysAdmin.Cache.CsDataDal - GetCsData enter
+2022-12-07 15:49:39,630 DEBUG [22] SysAdmin.Cache.CsDataDal - csDataType=[onlinevoiceroutingpolicy] origin=[SkypeOnline], identity=[]
+2022-12-07 15:49:39,637 DEBUG [22] SysAdmin.Cache.CsDataDal - GetCsData exit returning [0] results
+2022-12-07 15:49:39,775 DEBUG [16] SysAdmin.CacheSrv.EndpointModule - pageSize:[20],offset:[0]
+2022-12-07 15:49:39,902 DEBUG [16] SysAdmin.CacheSrv.EndpointModule - total records=[20]
+2022-12-07 15:49:39,902 DEBUG [16] SysAdmin.CacheSrv.EndpointModule - PostSkypeEndpointsPaginated exit
+2022-12-07 15:53:04,726 DEBUG [22] SysAdmin.CacheSrv.EndpointModule - QueueOneEndpointUpdateScript enter
+2022-12-07 15:53:04,726 DEBUG [22] SysAdmin.CacheSrv.EndpointModule - id=[gradya@m365x22164343.onmicrosoft.com]
+2022-12-07 15:59:19,795 DEBUG [22] SysAdmin.CacheSrv.EndpointModule - PostSkypeEndpointsPaginated enter
+2022-12-07 15:59:20,851 DEBUG [22] SysAdmin.CacheSrv.EndpointModule - pageSize:[20],offset:[0]
+2022-12-07 15:59:21,049 DEBUG [22] SysAdmin.CacheSrv.EndpointModule - total records=[20]
+2022-12-07 15:59:21,049 DEBUG [22] SysAdmin.CacheSrv.EndpointModule - PostSkypeEndpointsPaginated exit
+2022-12-07 16:08:01,191 DEBUG [10] SysAdmin.Cache.CsDataDal - GetCsData enter
+2022-12-07 16:08:01,191 DEBUG [10] SysAdmin.Cache.CsDataDal - csDataType=[pin] origin=[OnPrem], identity=[]
+2022-12-07 16:08:01,215 DEBUG [5] SysAdmin.CacheSrv.NumberRangeModule - GetNumberRangeNoCount enter
+2022-12-07 16:08:01,284 DEBUG [10] SysAdmin.Cache.CsDataDal - GetCsData exit returning [0] results
+2022-12-07 16:08:01,402 DEBUG [5] SysAdmin.CacheSrv.NumberRangeModule - GetNumberRangeNoCount exit
+2022-12-07 16:08:01,493 DEBUG [23] SysAdmin.CacheSrv.EndpointModule - PostSkypeEndpointsPaginated enter
+2022-12-07 16:08:01,530 DEBUG [16] SysAdmin.Cache.CsDataDal - GetCsData enter
+2022-12-07 16:08:01,530 DEBUG [16] SysAdmin.Cache.CsDataDal - csDataType=[onlinevoiceroutingpolicy] origin=[SkypeOnline], identity=[]
+2022-12-07 16:08:01,560 DEBUG [16] SysAdmin.Cache.CsDataDal - GetCsData exit returning [0] results
+2022-12-07 16:08:02,395 DEBUG [23] SysAdmin.CacheSrv.EndpointModule - pageSize:[20],offset:[0]
+2022-12-07 16:08:02,489 DEBUG [23] SysAdmin.CacheSrv.EndpointModule - total records=[20]
+2022-12-07 16:08:02,489 DEBUG [23] SysAdmin.CacheSrv.EndpointModule - PostSkypeEndpointsPaginated exit
+2022-12-07 16:08:13,608 DEBUG [5] SysAdmin.CacheSrv.EndpointModule - GetOneEndpointDetails enter
+2022-12-07 16:08:13,608 DEBUG [5] SysAdmin.CacheSrv.EndpointModule - id=[sip:gradya@m365x22164343.onmicrosoft.com]
+2022-12-07 16:08:13,608 DEBUG [5] SysAdmin.Cache.EndpointSrv - GetEndpointDetails enter
+2022-12-07 16:08:13,864 DEBUG [5] SysAdmin.Cache.EndpointSrv - Select * FROM AC_VIEW_CSONLINEUSER WHERE SipAddress= sip:gradya@m365x22164343.onmicrosoft.com
+2022-12-07 16:08:13,944 DEBUG [5] SysAdmin.Cache.EndpointSrv - GetEndpointDetails exit
+2022-12-07 16:08:13,944 DEBUG [5] SysAdmin.CacheSrv.EndpointModule - GetOneEndpointDetails exit
+2022-12-07 16:08:15,000 DEBUG [16] SysAdmin.Cache.PsQueueDal - GetBySip called
+2022-12-07 16:08:34,448 DEBUG [5] SysAdmin.CacheSrv.EndpointModule - QueueOneEndpointUpdateScript enter
+2022-12-07 16:08:34,448 DEBUG [5] SysAdmin.CacheSrv.EndpointModule - id=[gradya@m365x22164343.onmicrosoft.com]
+2022-12-07 16:08:34,448 DEBUG [5] SysAdmin.Cache.EndpointSrv - QueueOneEndpointUpdateScript enter
+2022-12-07 16:08:35,449 WARN [5] SysAdmin.Cache.EndpointSrv - no user found in AC_VIEW_SKYPE_USER
+2022-12-07 16:08:35,450 ERROR [5] SysAdmin.Cache.EndpointSrv - Endpoint gradya@m365x22164343.onmicrosoft.com not found!
+2022-12-07 16:11:17,592 DEBUG [10] SysAdmin.CacheSrv.EndpointModule - QueueOneEndpointUpdateScript enter
+2022-12-07 16:11:17,592 DEBUG [10] SysAdmin.CacheSrv.EndpointModule - id=[gradya@m365x22164343.onmicrosoft.com]
+2022-12-07 16:11:17,592 DEBUG [10] SysAdmin.Cache.EndpointSrv - QueueOneEndpointUpdateScript enter
+2022-12-07 16:11:18,104 WARN [10] SysAdmin.Cache.EndpointSrv - no user found in AC_VIEW_SKYPE_USER
+2022-12-07 16:11:18,104 ERROR [10] SysAdmin.Cache.EndpointSrv - Endpoint gradya@m365x22164343.onmicrosoft.com not found!
+2022-12-07 16:20:51,871 DEBUG [23] SysAdmin.Cache.DbCleanupService - BeforeCleanNumersReserved
+2022-12-07 16:20:52,108 DEBUG [23] SysAdmin.Cache.DbCleanupService - EXEC [dbo].[AC_CLEAN_ExpiredNumbersReserved]
+2022-12-07 16:20:52,921 DEBUG [23] SysAdmin.Cache.DbCleanupService - EXEC [dbo].[AC_CLEAN_HISTORY]
+2022-12-07 16:44:56,516 DEBUG [5] SysAdmin.CacheSrv.EndpointModule - QueueOneEndpointUpdateScript enter
+2022-12-07 16:44:56,516 DEBUG [5] SysAdmin.CacheSrv.EndpointModule - id=[gradya@m365x22164343.onmicrosoft.com]
+2022-12-07 16:44:56,516 DEBUG [5] SysAdmin.Cache.EndpointSrv - QueueOneEndpointUpdateScript enter
+2022-12-07 16:44:57,772 WARN [5] SysAdmin.Cache.EndpointSrv - no user found in AC_VIEW_SKYPE_USER
+2022-12-07 16:44:57,773 ERROR [5] SysAdmin.Cache.EndpointSrv - Endpoint gradya@m365x22164343.onmicrosoft.com not found!
+2022-12-07 16:45:25,759 DEBUG [25] SysAdmin.CacheSrv.NumberRangeModule - GetNumberRangeNoCount enter
+2022-12-07 16:45:25,768 DEBUG [16] SysAdmin.Cache.CsDataDal - GetCsData enter
+2022-12-07 16:45:25,768 DEBUG [16] SysAdmin.Cache.CsDataDal - csDataType=[pin] origin=[OnPrem], identity=[]
+2022-12-07 16:45:25,852 DEBUG [16] SysAdmin.Cache.CsDataDal - GetCsData exit returning [0] results
+2022-12-07 16:45:25,878 DEBUG [5] SysAdmin.Cache.CsDataDal - GetCsData enter
+2022-12-07 16:45:25,878 DEBUG [5] SysAdmin.Cache.CsDataDal - csDataType=[onlinevoiceroutingpolicy] origin=[SkypeOnline], identity=[]
+2022-12-07 16:45:25,885 DEBUG [5] SysAdmin.Cache.CsDataDal - GetCsData exit returning [0] results
+2022-12-07 16:45:25,902 DEBUG [22] SysAdmin.CacheSrv.EndpointModule - PostSkypeEndpointsPaginated enter
+2022-12-07 16:45:25,986 DEBUG [25] SysAdmin.CacheSrv.NumberRangeModule - GetNumberRangeNoCount exit
+2022-12-07 16:45:27,403 DEBUG [22] SysAdmin.CacheSrv.EndpointModule - pageSize:[20],offset:[0]
+2022-12-07 16:45:27,555 DEBUG [22] SysAdmin.CacheSrv.EndpointModule - total records=[20]
+2022-12-07 16:45:27,555 DEBUG [22] SysAdmin.CacheSrv.EndpointModule - PostSkypeEndpointsPaginated exit
+2022-12-07 16:45:31,148 DEBUG [25] SysAdmin.CacheSrv.EndpointModule - GetOneEndpointDetails enter
+2022-12-07 16:45:31,148 DEBUG [25] SysAdmin.CacheSrv.EndpointModule - id=[sip:gradya@m365x22164343.onmicrosoft.com]
+2022-12-07 16:45:31,148 DEBUG [25] SysAdmin.Cache.EndpointSrv - GetEndpointDetails enter
+2022-12-07 16:45:34,340 DEBUG [25] SysAdmin.Cache.EndpointSrv - Select * FROM AC_VIEW_CSONLINEUSER WHERE SipAddress= sip:gradya@m365x22164343.onmicrosoft.com
+2022-12-07 16:45:34,400 DEBUG [25] SysAdmin.Cache.EndpointSrv - GetEndpointDetails exit
+2022-12-07 16:45:34,401 DEBUG [25] SysAdmin.CacheSrv.EndpointModule - GetOneEndpointDetails exit
+2022-12-07 16:45:34,924 DEBUG [22] SysAdmin.Cache.PsQueueDal - GetBySip called
+2022-12-07 16:45:46,268 DEBUG [16] SysAdmin.CacheSrv.EndpointModule - QueueOneEndpointUpdateScript enter
+2022-12-07 16:45:46,268 DEBUG [16] SysAdmin.CacheSrv.EndpointModule - id=[sip:gradya@m365x22164343.onmicrosoft.com]
+2022-12-07 16:45:46,268 DEBUG [16] SysAdmin.Cache.EndpointSrv - QueueOneEndpointUpdateScript enter
+2022-12-07 16:45:46,487 DEBUG [16] SysAdmin.Cache.EndpointSrv - MakeOneEndpointUpdateScript called
+2022-12-07 16:45:46,504 DEBUG [16] SysAdmin.Cache.EndpointSrv - GetEndpointDetails enter
+2022-12-07 16:45:46,512 DEBUG [16] SysAdmin.Cache.EndpointSrv - Select * FROM AC_VIEW_CSONLINEUSER WHERE SipAddress= sip:gradya@m365x22164343.onmicrosoft.com
+2022-12-07 16:45:46,576 DEBUG [16] SysAdmin.Cache.EndpointSrv - GetEndpointDetails exit
+2022-12-07 16:45:46,624 DEBUG [16] SysAdmin.Cache.EndpointSrv - UpdateOneEndpointInDb enter
+2022-12-07 16:45:46,626 DEBUG [16] SysAdmin.Cache.EndpointSrv - setting property [OnPremLineURI] to [tel:+31364561226;ext=228] 
+2022-12-07 16:45:46,659 DEBUG [16] SysAdmin.Cache.EndpointSrv - entry LogException
+2022-12-07 16:45:46,659 ERROR [16] SysAdmin.Cache.EndpointSrv - Errorticket:   [638060283466594439]
+Ex.Type:       System.Data.SqlClient.SqlException
+Ex.Source:     .Net SqlClient Data Provider
+Ex.Message:    Invalid column name 'PublishingCounter'.
+Invalid column name 'TeamsVerticalPackagePolicy'.
+Ex.StackTrace:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at DapperExtensions.DapperImplementor.InternalUpdate[T](IDbConnection connection, T entity, IClassMapper classMap, IPredicate predicate, IDbTransaction transaction, IList`1 cols, Nullable`1 commandTimeout, Boolean ignoreAllKeyProperties)
+   at DapperExtensions.DapperImplementor.InternalUpdate[T](IDbConnection connection, T entity, IDbTransaction transaction, IList`1 cols, Nullable`1 commandTimeout, Boolean ignoreAllKeyProperties)
+   at DapperExtensions.DapperImplementor.Update[T](IDbConnection connection, T entity, IDbTransaction transaction, Nullable`1 commandTimeout, Boolean ignoreAllKeyProperties)
+   at SysAdmin.Cache.EndpointDbExt.UpdateEndpoint(IDbConnection dbConnection, Object toUpdateObj, IDbTransaction transaction) in C:\jenkinsslave\workspace\umpBuild\SysAdminKit\SysAdmin.Cache\EndpointSrv.cs:line 50
+   at SysAdmin.Cache.EndpointSrv.UpdateOneEndpointInDb(JObject response, String uType, IDictionary`2 newValuesParams, IDbTransaction transaction) in C:\jenkinsslave\workspace\umpBuild\SysAdminKit\SysAdmin.Cache\EndpointSrv.cs:line 320
+   at SysAdmin.Cache.EndpointSrv.QueueOneEndpointUpdateScript(String sipAddress, Dictionary`2 newValuesParams, String userName, SkypeEndpoint& updatedEndpoint, ChangeType activityType, PsCmdOrigin psCmdOrigin) in C:\jenkinsslave\workspace\umpBuild\SysAdminKit\SysAdmin.Cache\EndpointSrv.cs:line 223
+Ex.HelpLink:   
+
+2022-12-07 16:45:46,669 ERROR [16] SysAdmin.Cache.EndpointSrv - SqlException for sip:gradya@m365x22164343.onmicrosoft.com: Invalid column name 'PublishingCounter'.
+Invalid column name 'TeamsVerticalPackagePolicy'.!
+2022-12-07 16:45:46,669 DEBUG [16] SysAdmin.Cache.EndpointSrv - QueueOneEndpointUpdateScript exit
+2022-12-07 17:04:57,359 DEBUG [25] SysAdmin.Cache.CsDataDal - GetCsData enter
+2022-12-07 17:04:57,360 DEBUG [25] SysAdmin.Cache.CsDataDal - csDataType=[pin] origin=[OnPrem], identity=[]
+2022-12-07 17:04:57,485 DEBUG [25] SysAdmin.Cache.CsDataDal - GetCsData exit returning [0] results
+2022-12-07 17:04:57,487 DEBUG [5] SysAdmin.CacheSrv.NumberRangeModule - GetNumberRangeNoCount enter
+2022-12-07 17:04:57,520 DEBUG [5] SysAdmin.CacheSrv.NumberRangeModule - GetNumberRangeNoCount exit
+2022-12-07 17:04:57,602 DEBUG [25] SysAdmin.CacheSrv.EndpointModule - PostSkypeEndpointsPaginated enter
+2022-12-07 17:04:57,623 DEBUG [10] SysAdmin.Cache.CsDataDal - GetCsData enter
+2022-12-07 17:04:57,623 DEBUG [10] SysAdmin.Cache.CsDataDal - csDataType=[onlinevoiceroutingpolicy] origin=[SkypeOnline], identity=[]
+2022-12-07 17:04:57,624 DEBUG [10] SysAdmin.Cache.CsDataDal - GetCsData exit returning [0] results
+2022-12-07 17:04:57,802 DEBUG [25] SysAdmin.CacheSrv.EndpointModule - pageSize:[20],offset:[0]
+2022-12-07 17:04:57,854 DEBUG [25] SysAdmin.CacheSrv.EndpointModule - total records=[20]
+2022-12-07 17:04:57,855 DEBUG [25] SysAdmin.CacheSrv.EndpointModule - PostSkypeEndpointsPaginated exit
+2022-12-07 17:08:55,175 DEBUG [10] SysAdmin.CacheSrv.EndpointModule - GetOneEndpointDetails enter
+2022-12-07 17:08:55,176 DEBUG [10] SysAdmin.CacheSrv.EndpointModule - id=[sip:gradya@m365x22164343.onmicrosoft.com]
+2022-12-07 17:08:55,176 DEBUG [10] SysAdmin.Cache.EndpointSrv - GetEndpointDetails enter
+2022-12-07 17:08:55,313 DEBUG [10] SysAdmin.Cache.EndpointSrv - Select * FROM AC_VIEW_CSONLINEUSER WHERE SipAddress= sip:gradya@m365x22164343.onmicrosoft.com
+2022-12-07 17:08:55,423 DEBUG [10] SysAdmin.Cache.EndpointSrv - GetEndpointDetails exit
+2022-12-07 17:08:55,423 DEBUG [10] SysAdmin.CacheSrv.EndpointModule - GetOneEndpointDetails exit
+2022-12-07 17:08:56,041 DEBUG [5] SysAdmin.Cache.PsQueueDal - GetBySip called
+2022-12-07 17:09:02,833 DEBUG [3] SysAdmin.CacheSrv.EndpointModule - QueueOneEndpointUpdateScript enter
+2022-12-07 17:09:02,833 DEBUG [3] SysAdmin.CacheSrv.EndpointModule - id=[sip:gradya@m365x22164343.onmicrosoft.com]
+2022-12-07 17:09:02,833 DEBUG [3] SysAdmin.Cache.EndpointSrv - QueueOneEndpointUpdateScript enter
+2022-12-07 17:09:02,941 DEBUG [3] SysAdmin.Cache.EndpointSrv - MakeOneEndpointUpdateScript called
+2022-12-07 17:09:02,943 DEBUG [3] SysAdmin.Cache.EndpointSrv - GetEndpointDetails enter
+2022-12-07 17:09:02,948 DEBUG [3] SysAdmin.Cache.EndpointSrv - Select * FROM AC_VIEW_CSONLINEUSER WHERE SipAddress= sip:gradya@m365x22164343.onmicrosoft.com
+2022-12-07 17:09:03,043 DEBUG [3] SysAdmin.Cache.EndpointSrv - GetEndpointDetails exit
+2022-12-07 17:09:03,085 DEBUG [3] SysAdmin.Cache.EndpointSrv - UpdateOneEndpointInDb enter
+2022-12-07 17:09:03,088 DEBUG [3] SysAdmin.Cache.EndpointSrv - setting property [OnPremLineURI] to [tel:+31364561226;ext=229] 
+2022-12-07 17:09:03,135 DEBUG [3] SysAdmin.Cache.EndpointSrv - entry LogException
+2022-12-07 17:09:03,137 ERROR [3] SysAdmin.Cache.EndpointSrv - Errorticket:   [638060297431362713]
+Ex.Type:       System.Data.SqlClient.SqlException
+Ex.Source:     .Net SqlClient Data Provider
+Ex.Message:    Invalid column name 'PublishingCounter'.
+Invalid column name 'TeamsVerticalPackagePolicy'.
+Ex.StackTrace:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at DapperExtensions.DapperImplementor.InternalUpdate[T](IDbConnection connection, T entity, IClassMapper classMap, IPredicate predicate, IDbTransaction transaction, IList`1 cols, Nullable`1 commandTimeout, Boolean ignoreAllKeyProperties)
+   at DapperExtensions.DapperImplementor.InternalUpdate[T](IDbConnection connection, T entity, IDbTransaction transaction, IList`1 cols, Nullable`1 commandTimeout, Boolean ignoreAllKeyProperties)
+   at DapperExtensions.DapperImplementor.Update[T](IDbConnection connection, T entity, IDbTransaction transaction, Nullable`1 commandTimeout, Boolean ignoreAllKeyProperties)
+   at SysAdmin.Cache.EndpointDbExt.UpdateEndpoint(IDbConnection dbConnection, Object toUpdateObj, IDbTransaction transaction) in C:\jenkinsslave\workspace\umpBuild\SysAdminKit\SysAdmin.Cache\EndpointSrv.cs:line 50
+   at SysAdmin.Cache.EndpointSrv.UpdateOneEndpointInDb(JObject response, String uType, IDictionary`2 newValuesParams, IDbTransaction transaction) in C:\jenkinsslave\workspace\umpBuild\SysAdminKit\SysAdmin.Cache\EndpointSrv.cs:line 320
+   at SysAdmin.Cache.EndpointSrv.QueueOneEndpointUpdateScript(String sipAddress, Dictionary`2 newValuesParams, String userName, SkypeEndpoint& updatedEndpoint, ChangeType activityType, PsCmdOrigin psCmdOrigin) in C:\jenkinsslave\workspace\umpBuild\SysAdminKit\SysAdmin.Cache\EndpointSrv.cs:line 223
+Ex.HelpLink:   
+
+2022-12-07 17:09:03,151 ERROR [3] SysAdmin.Cache.EndpointSrv - SqlException for sip:gradya@m365x22164343.onmicrosoft.com: Invalid column name 'PublishingCounter'.
+Invalid column name 'TeamsVerticalPackagePolicy'.!
+2022-12-07 17:09:03,152 DEBUG [3] SysAdmin.Cache.EndpointSrv - QueueOneEndpointUpdateScript exit
+2022-12-07 17:27:05,828 DEBUG [6] SysAdmin.Nancy.NancySelfHost - Stopped. Good bye!
